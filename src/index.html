@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div style="height: 200px;">
+    <textarea 
+    title="editor"
+        placeholder="" 
+        id="editing"
+        
+        spellcheck="false" 
+        oninput="update(this.value); sync_scroll(this);" 
+        onscroll="sync_scroll(this);" 
+        onkeydown="check_tab(this, event);"
+        >
+    </textarea>
+        <pre id="highlighting" aria-hidden="true">
+        <code class="language-js" id="highlighting-content">
+        </code>
+        </pre>
+        </div>
+     
+        <script src='script.js'></script>
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js'></script> -->
+        <script src='./prism.js'></script>
+</body>
+</html>
+
